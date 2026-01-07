@@ -52,15 +52,15 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-4">
-                        <a href="mailto:admin@antigravity.dev" className="flex items-center space-x-4 p-4 terminal-panel hover:border-accent-cyan/30 group">
+                        <a href="mailto:khalidgirma3@gmail.com" className="flex items-center space-x-4 p-4 terminal-panel hover:border-accent-cyan/30 group">
                             <Mail className="w-5 h-5 text-accent-cyan" />
-                            <span className="font-mono text-sm text-text-muted group-hover:text-text-primary transition-colors">admin@antigravity.dev</span>
+                            <span className="font-mono text-sm text-text-muted group-hover:text-text-primary transition-colors">khalidgirma3@gmail.com</span>
                         </a>
                         <div className="flex space-x-4">
-                            <a href="#" className="p-4 terminal-panel hover:text-accent-cyan transition-all">
+                            <a href="https://github.com/khalidGir" target="_blank" rel="noopener noreferrer" className="p-4 terminal-panel hover:text-accent-cyan transition-all">
                                 <Github className="w-5 h-5" />
                             </a>
-                            <a href="#" className="p-4 terminal-panel hover:text-accent-cyan transition-all">
+                            <a href="https://www.linkedin.com/in/khalid-girma-5a864a2a0/" target="_blank" rel="noopener noreferrer" className="p-4 terminal-panel hover:text-accent-cyan transition-all">
                                 <Linkedin className="w-5 h-5" />
                             </a>
                         </div>

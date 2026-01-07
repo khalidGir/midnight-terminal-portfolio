@@ -1,9 +1,9 @@
-# Midnight Terminal Portfolio
+# Khalid Girma - Developer Portfolio
 
-A production-grade, developer-centric "system interface" portfolio built with React, TypeScript, and Tailwind CSS.
+A production-grade, developer-centric portfolio built with React, TypeScript, and Tailwind CSS.
 
 ## 🚀 Live Preview
-**Live Site:** [https://midnight-terminal.render.com/](https://midnight-terminal.render.com/)
+**Live Site:** Deployed on Netlify (URL will be available after deployment)
 
 ## 🛠 Tech Stack
 - **Framework:** React + Vite
@@ -18,7 +18,7 @@ A production-grade, developer-centric "system interface" portfolio built with Re
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/khalidGir/midnight-terminal-portfolio.git
    cd midnight-portfolio
    ```
 

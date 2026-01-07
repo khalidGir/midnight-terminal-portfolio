@@ -4,9 +4,9 @@ import { useTypewriter } from '../../hooks/useTypewriter';
 
 const Hero = () => {
     const typedText = useTypewriter([
-        "Building AI-powered web systems",
-        "Shipping real-world products",
-        "Engineering for performance",
+        "Building production-grade web systems",
+        "Shipping full-stack and AI-powered applications",
+        "Turning problems into deployed solutions",
     ]);
 
     return (
@@ -28,9 +28,9 @@ const Hero = () => {
 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
                     <span className="text-text-primary">I'm </span>
-                    <span className="text-accent-cyan glow-text-cyan">Antigravity</span>
+                    <span className="text-accent-cyan glow-text-cyan">Khalid</span>
                     <span className="block text-2xl md:text-3xl text-text-muted mt-4 font-mono">
-                        Full-Stack Engineer <span className="text-accent-violet">&&</span> AI Specialist
+                        Full-Stack Web Developer <span className="text-accent-violet">|</span> AI-Driven Systems
                     </span>
                 </h1>
 

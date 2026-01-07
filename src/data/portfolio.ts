@@ -3,25 +3,47 @@ import type { Project, Experience } from '../types';
 export const projects: Project[] = [
     {
         id: '1',
-        name: 'NeuralNexus Engine',
-        problem: 'Fragmentation in AI-driven data pipelines causing high latency and inconsistency.',
-        solution: 'A unified gRPC-based architectural layer for real-time LLM inference and vector search.',
-        techStack: ['Node.js', 'PostgreSQL', 'Redis', 'Python', 'Docker'],
-        architectureNotes: 'Microservices architecture with event-driven synchronization.',
-        deploymentStatus: 'production',
-        githubUrl: 'https://github.com/example/neuralnexus',
+        name: 'AI Chat Widget Platform',
+        problem: 'Businesses need an easy way to add AI-powered support chat to websites using their own documents.',
+        solution: 'Built a modular chat widget system with document ingestion, vector search, and customizable embeds.',
+        techStack: ['NestJS', 'PostgreSQL', 'Prisma', 'Qdrant', 'Docker', 'TypeScript'],
+        architectureNotes: 'Microservices with vector search and RAG pipeline',
+        deploymentStatus: 'development',
+        githubUrl: 'https://github.com/khalidGir',
         accentColor: 'cyan'
     },
     {
         id: '2',
-        name: 'Quantum UI System',
-        problem: 'Inflexible design systems slowing down development in enterprise-scale React apps.',
-        solution: 'A high-performance, token-based UI framework built with focus on accessibility and motion.',
-        techStack: ['React', 'TypeScript', 'Tailwind', 'Framer Motion'],
-        architectureNotes: 'Composite component pattern with strong internal type safety.',
-        deploymentStatus: 'production',
-        githubUrl: 'https://github.com/example/quantum-ui',
+        name: 'Full-Stack Dashboard Application',
+        problem: 'Managing data, analytics, and reporting across users required a centralized dashboard.',
+        solution: 'Developed a secure dashboard with authentication, charts, file uploads, and printable reports.',
+        techStack: ['React', 'Redux Toolkit', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
+        architectureNotes: 'JWT authentication with role-based access control',
+        deploymentStatus: 'development',
+        githubUrl: 'https://github.com/khalidGir',
         accentColor: 'violet'
+    },
+    {
+        id: '3',
+        name: 'SEO Analysis Tool',
+        problem: 'Website owners lacked simple tools to compare SEO health against competitors.',
+        solution: 'Built a one-page SEO comparison tool that analyzes two websites and outputs actionable recommendations.',
+        techStack: ['React', 'JavaScript', 'SEO APIs', 'Netlify'],
+        architectureNotes: 'Client-side processing with API integration',
+        deploymentStatus: 'production',
+        githubUrl: 'https://github.com/khalidGir',
+        accentColor: 'green'
+    },
+    {
+        id: '4',
+        name: 'E-Commerce Website',
+        problem: 'A local shop needed an online presence to list products and manage deliveries.',
+        solution: 'Designed and deployed a lightweight e-commerce website focused on usability and fast deployment.',
+        techStack: ['React', 'Tailwind CSS', 'Backend APIs'],
+        architectureNotes: 'Optimized for fast loading and mobile experience',
+        deploymentStatus: 'development',
+        githubUrl: 'https://github.com/khalidGir',
+        accentColor: 'amber'
     }
 ];
 
@@ -29,25 +51,15 @@ export const experiences: Experience[] = [
     {
         id: '1',
         period: '2024 - Present',
-        company: 'Self-Initiated',
+        company: 'Independent / Self-Initiated Projects',
         role: 'Full-Stack Developer',
         description: [
-            'Developed and deployed autonomous AI agents for workflow automation.',
-            'Optimized database queries reducing latency by 40% across major projects.',
+            'Built and deployed full-stack applications from scratch',
+            'Integrated authentication, payments, and databases',
+            'Worked with AI-powered features and automation',
+            'Focused on real-world usability and deployment',
         ],
-        skills: ['TS', 'Next.js', 'Go', 'AI'],
+        skills: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'AI'],
         type: 'product'
-    },
-    {
-        id: '2',
-        period: '2023 - 2024',
-        company: 'Various Clients',
-        role: 'Freelance Engineer',
-        description: [
-            'Built production-grade web applications for e-commerce and fintech startups.',
-            'Implemented robust CI/CD pipelines significantly improving deployment speed.',
-        ],
-        skills: ['React', 'Node', 'AWS'],
-        type: 'freelance'
     }
 ];

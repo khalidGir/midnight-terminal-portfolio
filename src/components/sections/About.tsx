@@ -6,22 +6,27 @@ const About = () => {
         {
             title: "Frontend",
             icon: <Layout className="w-4 h-4" />,
-            skills: ["React", "TypeScript", "Tailwind", "Next.js", "Framer Motion"]
+            skills: ["React", "TypeScript", "Tailwind CSS", "Redux Toolkit", "Framer Motion"]
         },
         {
             title: "Backend",
             icon: <Code2 className="w-4 h-4" />,
-            skills: ["Node.js", "Go", "PostgreSQL", "Redis", "gRPC"]
+            skills: ["Node.js", "Express.js", "NestJS", "REST APIs", "JWT Auth"]
+        },
+        {
+            title: "Databases",
+            icon: <Shield className="w-4 h-4" />,
+            skills: ["PostgreSQL", "MongoDB", "Prisma", "Mongoose", "Firestore"]
         },
         {
             title: "DevOps",
             icon: <Activity className="w-4 h-4" />,
-            skills: ["Docker", "Kubernetes", "AWS", "GitHub Actions", "Terraform"]
+            skills: ["Git & GitHub", "Docker", "GitHub Actions", "Render", "Netlify"]
         },
         {
             title: "AI / Automation",
             icon: <Cpu className="w-4 h-4" />,
-            skills: ["LLM Integration", "RAG Pipeline", "Vector DBs", "LangChain"]
+            skills: ["LLM Integration", "Vector DBs (Qdrant)", "PDF Ingestion", "Chatbots"]
         }
     ];
 
@@ -41,21 +46,20 @@ const About = () => {
                     </div>
 
                     <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
-                        Serious engineering mindset. <br />
-                        <span className="text-text-muted">Focused on performance and scale.</span>
+                        Full-stack developer. <br />
+                        <span className="text-text-muted">Focused on shipping real products.</span>
                     </h2>
 
                     <div className="prose prose-invert max-w-none text-text-muted">
                         <p className="text-lg leading-relaxed">
-                            I specialize in building complex, data-driven web systems that provide seamless user experiences.
-                            My approach is rooted in architectural rigor, strict typing, and a "performance-first" philosophy.
+                            I am a full-stack web developer focused on building and deploying real-world applications using modern JavaScript frameworks, backend systems, and AI integrations. My work emphasizes clean architecture, performance, and practical problem-solving. I prioritize shipping functional products over demos.
                         </p>
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0 mt-8">
                             {[
-                                "Architecting scalable full-stack applications",
-                                "Optimizing frontend performance (Lighthouse 100)",
-                                "Integrating advanced AI/LLM features",
-                                "Building robust CI/CD and DevOps workflows"
+                                "Building and deploying full-stack applications",
+                                "Integrating AI-powered features and automation",
+                                "Clean architecture and type-safe development",
+                                "Shipping real products, not just demos"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start space-x-3 text-sm">
                                     <span className="text-accent-cyan font-mono mt-1">/</span>
