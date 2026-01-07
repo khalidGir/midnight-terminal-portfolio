@@ -33,9 +33,6 @@ const config: Config = {
                 terminal: '0 0 20px rgba(34, 211, 238, 0.1)',
                 'terminal-glow': '0 0 15px rgba(139, 92, 246, 0.2)',
             },
-            backgroundImage: {
-                'noise-pattern': "url('/noise.png')",
-            },
         },
     },
     plugins: [],

@@ -1,21 +1,6 @@
-@import "tailwindcss";
-
-@theme {
-  --color-bg-primary: #0B0F14;
-  --color-bg-secondary: #111827;
-  --color-accent-cyan: #22D3EE;
-  --color-accent-violet: #8B5CF6;
-  --color-status-success: #10B981;
-  --color-status-warning: #F59E0B;
-  --color-text-primary: #E5E7EB;
-  --color-text-muted: #9CA3AF;
-
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
-
-  --shadow-terminal: 0 0 20px rgba(34, 211, 238, 0.1);
-  --shadow-terminal-glow: 0 0 15px rgba(139, 92, 246, 0.2);
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   html {
@@ -35,12 +20,15 @@
   ::-webkit-scrollbar {
     width: 8px;
   }
+
   ::-webkit-scrollbar-track {
     @apply bg-bg-primary;
   }
+
   ::-webkit-scrollbar-thumb {
     @apply bg-bg-secondary border-2 border-bg-primary rounded-full;
   }
+
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-accent-cyan/50;
   }
@@ -86,6 +74,6 @@
 .gradient-line {
   height: 1px;
   width: 100%;
-  background: linear-gradient(90deg, transparent, var(--color-accent-cyan), transparent);
+  background: linear-gradient(90deg, transparent, theme('colors.accent.cyan'), transparent);
   opacity: 0.2;
 }
