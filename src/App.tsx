@@ -11,30 +11,22 @@ function App() {
     <MainLayout>
       <Navbar />
 
-      <div className="space-y-4">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-24 pb-24">
         <Hero />
-
-        <div className="gradient-line" />
         <About />
-
-        <div className="gradient-line" />
         <Projects />
-
-        <div className="gradient-line" />
         <Experience />
-
-        <div className="gradient-line" />
         <Contact />
-      </div>
+      </main>
 
-      <footer className="py-12 border-t border-text-muted/10 mt-20">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="font-mono text-xs text-text-muted">
-            <span className="text-accent-cyan">©</span> 2026 midnight_terminal_v1.0.4
+      <footer className="py-12 border-t border-slate-200 mt-20 bg-white">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm text-text-secondary">
+          <div>
+            © 2026 Khalid. All rights reserved.
           </div>
-          <div className="flex space-x-6 font-mono text-xs text-text-muted">
-            <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-status-success mr-2" /> System_Online</span>
-            <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-accent-violet mr-2" /> Encrypted_Channel</span>
+          <div className="flex space-x-6">
+            <a href="https://github.com/khalidGir" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/khalid-girma-5a864a2a0/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors">LinkedIn</a>
           </div>
         </div>
       </footer>

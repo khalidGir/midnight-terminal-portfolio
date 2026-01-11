@@ -9,29 +9,30 @@ const config: Config = {
         extend: {
             colors: {
                 bg: {
-                    primary: '#0B0F14',
-                    secondary: '#111827',
-                },
-                accent: {
-                    cyan: '#22D3EE',
-                    violet: '#8B5CF6',
-                },
-                status: {
-                    success: '#10B981',
-                    warning: '#F59E0B',
+                    primary: '#f8fafc', // Slate 50
+                    secondary: '#ffffff', // White
                 },
                 text: {
-                    primary: '#E5E7EB',
-                    muted: '#9CA3AF',
+                    primary: '#0f172a', // Slate 900
+                    secondary: '#475569', // Slate 600
+                    muted: '#94a3b8', // Slate 400
+                },
+                accent: {
+                    primary: '#4f46e5', // Indigo 600
+                    hover: '#4338ca', // Indigo 700
+                },
+                status: {
+                    success: '#10b981',
+                    warning: '#f59e0b',
                 },
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', 'sans-serif'],
-                mono: ['JetBrains Mono', 'monospace'],
+                heading: ['Outfit', 'sans-serif'],
             },
             boxShadow: {
-                terminal: '0 0 20px rgba(34, 211, 238, 0.1)',
-                'terminal-glow': '0 0 15px rgba(139, 92, 246, 0.2)',
+                'card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+                'card-hover': '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
             },
         },
     },

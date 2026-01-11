@@ -9,8 +9,7 @@ export const projects: Project[] = [
         techStack: ['NestJS', 'PostgreSQL', 'Prisma', 'Qdrant', 'Docker', 'TypeScript'],
         architectureNotes: 'Microservices with vector search and RAG pipeline',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir',
-        accentColor: 'cyan'
+        githubUrl: 'https://github.com/khalidGir'
     },
     {
         id: '2',
@@ -20,8 +19,7 @@ export const projects: Project[] = [
         techStack: ['React', 'Redux Toolkit', 'Node.js', 'Express', 'MongoDB', 'Chart.js'],
         architectureNotes: 'JWT authentication with role-based access control',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir',
-        accentColor: 'violet'
+        githubUrl: 'https://github.com/khalidGir'
     },
     {
         id: '3',
@@ -31,8 +29,7 @@ export const projects: Project[] = [
         techStack: ['React', 'JavaScript', 'SEO APIs', 'Netlify'],
         architectureNotes: 'Client-side processing with API integration',
         deploymentStatus: 'production',
-        githubUrl: 'https://github.com/khalidGir',
-        accentColor: 'green'
+        githubUrl: 'https://github.com/khalidGir'
     },
     {
         id: '4',
@@ -42,8 +39,7 @@ export const projects: Project[] = [
         techStack: ['React', 'Tailwind CSS', 'Backend APIs'],
         architectureNotes: 'Optimized for fast loading and mobile experience',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir',
-        accentColor: 'amber'
+        githubUrl: 'https://github.com/khalidGir'
     }
 ];
 

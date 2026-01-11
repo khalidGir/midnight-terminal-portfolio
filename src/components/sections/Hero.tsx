@@ -1,67 +1,77 @@
+
 import { motion } from 'framer-motion';
-import { ChevronRight, Terminal as TerminalIcon } from 'lucide-react';
-import { useTypewriter } from '../../hooks/useTypewriter';
+import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import profileImage from '../../assets/profile.jpg';
 
 const Hero = () => {
-    const typedText = useTypewriter([
-        "Building production-grade web systems",
-        "Shipping full-stack and AI-powered applications",
-        "Turning problems into deployed solutions",
-    ]);
-
     return (
-        <div className="relative min-h-[80vh] flex flex-col justify-center">
-            {/* Background Grid Pattern (Subtle) */}
-            <div className="absolute inset-0 -z-10 opacity-[0.03] pointer-events-none"
-                style={{ backgroundImage: 'radial-gradient(#22D3EE 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-3xl"
-            >
-                <div className="flex items-center space-x-2 text-accent-cyan font-mono text-sm mb-6">
-                    <TerminalIcon className="w-4 h-4" />
-                    <span className="bg-accent-cyan/10 px-2 py-0.5 rounded">v2.0.4-stable</span>
-                </div>
-
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                    <span className="text-text-primary">I'm </span>
-                    <span className="text-accent-cyan glow-text-cyan">Khalid</span>
-                    <span className="block text-2xl md:text-3xl text-text-muted mt-4 font-mono">
-                        Full-Stack Web Developer <span className="text-accent-violet">|</span> AI-Driven Systems
-                    </span>
-                </h1>
-
-                <div className="h-12 flex items-center font-mono text-lg md:text-xl text-text-muted mb-10">
-                    <span className="text-status-success mr-2">{'>'}</span>
-                    <span>{typedText}</span>
-                    <motion.span
-                        animate={{ opacity: [1, 0] }}
-                        transition={{ repeat: Infinity, duration: 0.8 }}
-                        className="w-2.5 h-6 bg-accent-cyan ml-1"
-                    />
-                </div>
-
-                <div className="flex flex-wrap gap-4">
-                    <a
-                        href="#projects"
-                        className="group relative px-8 py-3 bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan rounded-md overflow-hidden hover:bg-accent-cyan/20 transition-all"
-                    >
-                        <span className="relative z-10 flex items-center font-mono">
-                            View Projects <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+        <section id="home" className="min-h-screen flex items-center pt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                {/* Left Column: Text */}
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="space-y-8"
+                >
+                    <div className="space-y-4">
+                        <span className="inline-block px-3 py-1 bg-accent-primary/10 text-accent-primary rounded-full text-sm font-medium">
+                            Available for hire
                         </span>
-                    </a>
-                    <a
-                        href="#contact"
-                        className="px-8 py-3 border border-text-muted/20 text-text-primary rounded-md font-mono hover:bg-white/5 transition-all"
-                    >
-                        Contact
-                    </a>
-                </div>
-            </motion.div>
-        </div>
+                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-text-primary leading-tight">
+                            Hi, I'm Khalid.
+                        </h1>
+                        <p className="text-xl text-text-secondary leading-relaxed max-w-lg">
+                            I simplify complex problems and build high-performance web experiences.
+                            Let's create something exceptional together.
+                        </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-4">
+                        <a href="#projects" className="btn-primary">
+                            View Work
+                        </a>
+                        <a href="#contact" className="px-6 py-3 rounded-lg text-text-primary font-medium hover:bg-slate-100 transition-colors flex items-center group">
+                            Contact Me <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </a>
+                    </div>
+
+                    <div className="flex items-center space-x-6 pt-4 text-text-muted">
+                        <a href="#" className="hover:text-accent-primary transition-colors hover:scale-110 transform duration-200">
+                            <Github size={24} />
+                        </a>
+                        <a href="#" className="hover:text-accent-primary transition-colors hover:scale-110 transform duration-200">
+                            <Linkedin size={24} />
+                        </a>
+                        <a href="mailto:hello@example.com" className="hover:text-accent-primary transition-colors hover:scale-110 transform duration-200">
+                            <Mail size={24} />
+                        </a>
+                    </div>
+                </motion.div>
+
+                {/* Right Column: Image */}
+                <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative"
+                >
+                    {/* Decorative Elements */}
+                    <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent-primary/10 rounded-full blur-3xl opacity-50" />
+                    <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl opacity-50" />
+
+                    <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl ring-8 ring-white/50 aspect-[4/5] max-w-md mx-auto transform rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <img
+                            src={profileImage}
+                            alt="Khalid"
+                            className="w-full h-full object-cover"
+                        />
+                        {/* Subtle Overlay gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    </div>
+                </motion.div>
+            </div>
+        </section>
     );
 };
 

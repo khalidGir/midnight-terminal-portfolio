@@ -9,7 +9,6 @@ export interface Project {
     liveUrl?: string;
     githubUrl: string;
     image?: string;
-    accentColor: 'cyan' | 'violet' | 'green' | 'amber';
 }
 
 export interface Experience {
