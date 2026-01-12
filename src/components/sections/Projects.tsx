@@ -64,7 +64,7 @@ const Projects = () => {
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4 md:space-y-0">
                     <div>
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
-                            Featured Projects
+                            Github Projects
                         </h2>
                         <p className="text-lg text-text-secondary max-w-xl">
                             A selection of projects that demonstrate my technical capabilities and problem-solving skills.
