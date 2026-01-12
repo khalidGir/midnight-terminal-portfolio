@@ -23,6 +23,15 @@ const Navbar = () => {
         { id: 'contact', label: 'Contact' },
     ];
 
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+            setActiveSection(id);
+            setIsMobileMenuOpen(false);
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
@@ -56,7 +65,10 @@ const Navbar = () => {
                                     ? "text-accent-primary font-semibold"
                                     : "text-text-secondary hover:text-accent-primary"
                             )}
-                            onClick={() => setActiveSection(item.id)}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                scrollToSection(item.id);
+                            }}
                         >
                             {item.label}
                         </a>
@@ -89,8 +101,11 @@ const Navbar = () => {
                                 <a
                                     key={item.id}
                                     href={`#${item.id}`}
-                                    onClick={() => scrollToSection(item.id)}
-                                    className="text-lg font-medium text-text-secondary hover:text-accent-primary py-2 block"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection(item.id);
+                                    }}
+                                    className="text-lg font-heading font-medium text-text-secondary hover:text-accent-primary py-2 block"
                                 >
                                     {item.label}
                                 </a>
