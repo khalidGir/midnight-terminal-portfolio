@@ -6,7 +6,7 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     return (
-        <div className="relative min-h-screen bg-bg-primary text-text-primary">
+        <div className="relative min-h-screen bg-bg-primary text-text-primary bg-elegant-gradient">
             {/* Top Navigation Wrapper */}
             <div className="relative z-10">
                 {children}

@@ -89,7 +89,7 @@ const Navbar = () => {
                                 <a
                                     key={item.id}
                                     href={`#${item.id}`}
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={() => scrollToSection(item.id)}
                                     className="text-lg font-medium text-text-secondary hover:text-accent-primary py-2 block"
                                 >
                                     {item.label}
