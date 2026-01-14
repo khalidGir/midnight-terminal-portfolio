@@ -23,13 +23,14 @@ export const projects: Project[] = [
     },
     {
         id: '1124225469',
-        name: 'SimpleApp',
+        name: 'Orbit Watch',
         problem: 'No description available.',
         solution: 'Open source project available on GitHub.',
         techStack: ['JavaScript'],
         architectureNotes: 'GitHub Repository',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/SimpleApp'
+        githubUrl: 'https://github.com/khalidGir/SimpleApp',
+        liveUrl: 'https://orbitwatch5.vercel.app'
     },
     {
         id: '1121885445',
@@ -119,7 +120,8 @@ export const projects: Project[] = [
         techStack: ['JavaScript'],
         architectureNotes: 'GitHub Repository',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Link-Scope'
+        githubUrl: 'https://github.com/khalidGir/Link-Scope',
+        liveUrl: 'https://link-scope-theta.vercel.app'
     },
     {
         id: '1105175315',
