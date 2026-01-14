@@ -9,7 +9,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group card overflow-hidden flex flex-col h-full"
+            className={`group card overflow-hidden flex flex-col h-full ${!project.liveUrl ? 'opacity-70' : ''}`}
         >
             <div className="p-8 flex-1 flex flex-col">
                 <div className="flex justify-between items-start mb-6">
@@ -45,10 +45,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         <span className="text-sm font-medium text-text-primary">
                             {project.solution.substring(0, 40)}...
                         </span>
-                        {project.liveUrl && (
+                        {project.liveUrl ? (
                             <a href={project.liveUrl} className="flex items-center text-sm font-medium text-accent-primary group-hover:underline">
-                                Visit Site <ArrowUpRight className="ml-1 w-4 h-4" />
+                                See Project <ArrowUpRight className="ml-1 w-4 h-4" />
                             </a>
+                        ) : (
+                            <span className="flex items-center text-sm font-medium text-text-muted cursor-not-allowed">
+                                In Development
+                            </span>
                         )}
                     </div>
                 </div>
