@@ -19,6 +19,7 @@ export interface Experience {
     description: string[];
     skills: string[];
     type: 'freelance' | 'product' | 'learning' | 'internship';
+    logo?: string;
 }
 
 export interface SkillGroup {

@@ -25,12 +25,19 @@ const Experience = () => {
                             transition={{ delay: i * 0.1 }}
                             className="card p-8 flex flex-col md:flex-row gap-6 hover:shadow-md transition-shadow"
                         >
-                            <div className="md:w-1/4 shrink-0">
+                            <div className="md:w-1/4 shrink-0 flex flex-col items-start">
+                                {exp.logo && (
+                                    <img 
+                                        src={exp.logo} 
+                                        alt={`${exp.company} logo`} 
+                                        className="w-20 h-20 object-contain bg-slate-800 rounded-md p-2 mb-3 select-none" 
+                                    />
+                                )}
                                 <span className="inline-block px-3 py-1 bg-indigo-50 text-accent-primary rounded-full text-sm font-medium mb-2">
                                     {exp.period}
                                 </span>
                                 <div className="flex items-center text-text-secondary font-medium mt-1">
-                                    <Briefcase className="w-4 h-4 mr-2" />
+                                    <Briefcase className="w-4 h-4 mr-2 shrink-0" />
                                     {exp.company}
                                 </div>
                             </div>

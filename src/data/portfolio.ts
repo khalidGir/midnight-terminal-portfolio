@@ -2,184 +2,135 @@ import type { Project, Experience } from '../types';
 
 export const projects: Project[] = [
     {
-        id: '1127171925',
-        name: 'ethio-bridge',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['TypeScript'],
-        architectureNotes: 'GitHub Repository',
+        id: 'ethi-sugar-backend',
+        name: 'Ethio-Sugar Backend',
+        problem: 'Needed a robust, scalable backend architecture for an agricultural platform processing complex relationships.',
+        solution: 'Developed a feature-rich, typed backend using TypeScript and Node.js with secure authentication and database integration for the EthioSugar platform.',
+        techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL'],
+        architectureNotes: 'Microservices style structure with clean repository pattern.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/ethio-bridge'
+        githubUrl: 'https://github.com/khalidGir/ethi-sugar-backend'
     },
     {
-        id: '1129007485',
-        name: 'midnight-terminal-portfolio',
-        problem: 'Dark-First Developer Portfolio - "Midnight Terminal" Theme',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['TypeScript'],
-        architectureNotes: 'GitHub Repository',
+        id: 'ethio-sugar-frontend',
+        name: 'Ethio-Sugar Frontend',
+        problem: 'Required a performant and responsive interface for Ethiopian agricultural management and operations dashboard.',
+        solution: 'Built a structured frontend utilizing React and TypeScript to handle intricate dashboard data and management roles.',
+        techStack: ['TypeScript', 'React', 'Tailwind CSS'],
+        architectureNotes: 'Component-first architecture tailored for an industrial data dashboard.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/midnight-terminal-portfolio'
+        githubUrl: 'https://github.com/khalidGir/ethio-sugar-frontend'
     },
     {
-        id: '1124225469',
-        name: 'Orbit Watch',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['JavaScript'],
-        architectureNotes: 'GitHub Repository',
+        id: 'sekina-wellness',
+        name: 'Sekina Wellness',
+        problem: 'Needed a modern health and wellness scheduling and informational web platform.',
+        solution: 'Constructed an engaging and interactive TypeScript-based web platform to assist users in managing wellness goals and bookings.',
+        techStack: ['TypeScript', 'React', 'Next.js'],
+        architectureNotes: 'Server-side rendered application focusing on SEO and performance.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/SimpleApp',
-        liveUrl: 'https://orbitwatch5.vercel.app'
-    },
+        githubUrl: 'https://github.com/khalidGir/Sekina-wellness'
+    },    
     {
-        id: '1121885445',
-        name: 'matress-shop',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Unknown'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/matress-shop'
-    },
-    {
-        id: '1108292886',
-        name: 'Shop-App',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['JavaScript'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Shop-App'
-    },
-    {
-        id: '1118874742',
-        name: 'offline-order-delivery-manager',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Unknown'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/offline-order-delivery-manager'
-    },
-    {
-        id: '1115444571',
-        name: 'EqubApp',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Unknown'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/EqubApp'
-    },
-    {
-        id: '1114783188',
-        name: 'Equb',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['JavaScript'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Equb'
-    },
-    {
-        id: '1105229681',
-        name: 'Dashboard-UI',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['TypeScript'],
-        architectureNotes: 'GitHub Repository',
+        id: 'dashboard-ui',
+        name: 'Modern Dashboard UI',
+        problem: 'Required a unified template for displaying multiple streams of data metrics and analytics.',
+        solution: 'Designed and implemented a versatile and highly responsive aesthetic dashboard tailored for analytics applications.',
+        techStack: ['TypeScript', 'React', 'Tailwind CSS', 'Chart.js'],
+        architectureNotes: 'Reusable UI component library for consistent styling.',
         deploymentStatus: 'development',
         githubUrl: 'https://github.com/khalidGir/Dashboard-UI'
     },
     {
-        id: '1111125213',
-        name: 'AI-Inventory-Sales-Platform',
-        problem: 'AI Augmented Inventory Sales Orchestration Platform Built on Django',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Unknown'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/AI-Augmented-Inventory-Sales-Orchestration-Platform-Built-on-Django-'
-    },
-    {
-        id: '1109249669',
-        name: 'AI-task-manager',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['TypeScript'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/AI-task-manager'
-    },
-    {
-        id: '1105818983',
-        name: 'Link-Scope',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['JavaScript'],
-        architectureNotes: 'GitHub Repository',
+        id: 'link-scope',
+        name: 'Link Scope',
+        problem: 'Needed an efficient way to manage, shorten, and track links seamlessly.',
+        solution: 'Built a complete link management and tracking tool featuring dynamic analytics using JavaScript.',
+        techStack: ['JavaScript', 'Node.js', 'React'],
+        architectureNotes: 'RESTful API architecture handling concurrent redirect tracking.',
         deploymentStatus: 'development',
         githubUrl: 'https://github.com/khalidGir/Link-Scope',
         liveUrl: 'https://link-scope-theta.vercel.app'
     },
     {
-        id: '1105175315',
-        name: 'Snake-Game',
-        problem: 'practicing tailwind',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['HTML'],
-        architectureNotes: 'GitHub Repository',
+        id: 'interactive-resume-builder',
+        name: 'Interactive Resume Builder',
+        problem: 'Job seekers needed an easy-to-use, visual tool to construct real-time resumes.',
+        solution: 'Developed a real-time responsive resume builder that compiles user input into beautifully formatted document structures.',
+        techStack: ['TypeScript', 'React', 'Tailwind CSS'],
+        architectureNotes: 'State management optimized for continuous real-time preview updates.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Snake-Game'
+        githubUrl: 'https://github.com/khalidGir/interactive-resume-builder'
     },
     {
-        id: '1095273695',
-        name: 'todo-app',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Unknown'],
-        architectureNotes: 'GitHub Repository',
+        id: 'ai-task-manager',
+        name: 'AI Task Manager',
+        problem: 'Standard task managers lacked smart prioritization and context-aware suggestions.',
+        solution: 'Created an intelligent task management system utilizing AI concepts to prioritize efficiency and schedule optimization.',
+        techStack: ['TypeScript', 'React', 'Node.js', 'AI Integration'],
+        architectureNotes: 'Asynchronous event-driven architecture integrating with AI prompt APIs.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/todo-app'
+        githubUrl: 'https://github.com/khalidGir/AI-task-manager'
     },
     {
-        id: '1056559397',
-        name: 'sentiment_analysis_api',
-        problem: 'No description available.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Python'],
-        architectureNotes: 'GitHub Repository',
+        id: 'sentiment-analysis-api',
+        name: 'Sentiment Analysis API',
+        problem: 'Required automated insights into user feedback loops and textual data analytics.',
+        solution: 'Engineered a machine learning-backed API capable of parsing text inputs and categorizing underlying sentiment data payloads.',
+        techStack: ['Python', 'Flask', 'Machine Learning', 'NLP'],
+        architectureNotes: 'REST API wrapping NLP analysis models.',
         deploymentStatus: 'development',
         githubUrl: 'https://github.com/khalidGir/sentiment_analysis_api'
-    },
-    {
-        id: '1044771246',
-        name: 'mern_tutorial',
-        problem: 'learning mern stack with traversy media',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['Unknown'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/mern_tutorial'
-    },
-    {
-        id: '1044443992',
-        name: 'Weather-app-API-test',
-        problem: 'A weather app to test a weather api, and practice raw css styling.',
-        solution: 'Open source project available on GitHub.',
-        techStack: ['JavaScript'],
-        architectureNotes: 'GitHub Repository',
-        deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Weather-app-API-test'
     }
 ];
 
 export const experiences: Experience[] = [
     {
+        id: 'syntax-program',
+        period: 'Dec 2025 - Present',
+        company: 'Syntax Software Solutions',
+        role: 'Full Stack Developer & n8n Automation Expert',
+        description: [
+            'Contributed to core development and project design utilizing full-stack technologies.',
+            'Implemented workflow automation and processes using n8n to streamline operations.',
+            'Participated in code reviews and continuous integration processes.'
+        ],
+        skills: ['JavaScript', 'TypeScript', 'React', 'Node.js', 'n8n'],
+        type: 'product',
+        logo: '/syntax_logo.png'
+    },
+    {
+        id: 'awura-technologies',
+        period: 'Dec 2025 - Present',
+        company: 'Awura Technologies',
+        role: 'Frontend QA Engineer',
+        description: [
+            'Established and maintained comprehensive QA testing protocols for frontend applications.',
+            'Identified and documented software defects, ensuring high-quality user experiences.',
+            'Collaborated closely with developers to resolve visual and functional issues.'
+        ],
+        skills: ['React', 'TypeScript', 'Testing', 'QA', 'Cypress'],
+        type: 'product',
+        logo: '/awura_logo.svg'
+    },
+    {
+        id: 'startup-agile',
+        period: 'Dec 2025 - Present',
+        company: 'Startup Agile',
+        role: 'Backend Developer',
+        description: [
+            'Built robust backend infrastructure and APIs to support rapidly iterating MVP features.',
+            'Adapted to agile methodologies and collaborative sprints to deliver reliable data services.',
+            'Optimized database queries and managed server deployments.'
+        ],
+        skills: ['Node.js', 'PostgreSQL', 'TypeScript', 'Express', 'Agile'],
+        type: 'product',
+        logo: '/startup_agile.png'
+    },
+    {
         id: 'ati-internship',
         period: '3 Months',
-        company: 'ATI (Agriculture and Technologies Institution)',
+        company: 'ATI (Agricultural Transformation Institute)',
         role: 'Agri-Chatbot Developer Intern',
         description: [
             'Built an agricultural chatbot integrated with Telegram to assist farmers.',
@@ -187,7 +138,8 @@ export const experiences: Experience[] = [
             'Collaborated on AI integration for localized agricultural support.'
         ],
         skills: ['Python', 'Telegram API', 'Chatbot Development', 'AI'],
-        type: 'internship'
+        type: 'internship',
+        logo: '/ati_logo.png'
     },
     {
         id: '1',
