@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Layout, Code2, Cpu, Activity } from 'lucide-react';
+import { Shield, Layout, Code2, Cpu, CheckCircle, Lock } from 'lucide-react';
 
 const About = () => {
     const skillModules = [
@@ -11,22 +11,27 @@ const About = () => {
         {
             title: "Backend",
             icon: <Code2 className="w-5 h-5" />,
-            skills: ["Node.js", "Express.js", "NestJS", "REST APIs", "JWT Auth"]
+            skills: ["Node.js", "Python", "FastAPI", "NestJS", "SQLAlchemy"]
         },
         {
             title: "Databases",
             icon: <Shield className="w-5 h-5" />,
-            skills: ["PostgreSQL", "MongoDB", "Prisma", "Mongoose", "Firestore"]
+            skills: ["PostgreSQL", "MongoDB", "Prisma", "SQLite", "Firestore"]
         },
         {
-            title: "DevOps",
-            icon: <Activity className="w-5 h-5" />,
-            skills: ["Git & GitHub", "Docker", "GitHub Actions", "Render", "Netlify"]
+            title: "DevOps & Security",
+            icon: <Lock className="w-5 h-5" />,
+            skills: ["Git", "Docker", "CI/CD", "RBAC", "Input Validation", "JWT Auth"]
         },
         {
-            title: "AI / Automation",
+            title: "Testing & QA",
+            icon: <CheckCircle className="w-5 h-5" />,
+            skills: ["Pytest", "Load Testing", "TDD", "Integration Testing"]
+        },
+        {
+            title: "AI / NLP",
             icon: <Cpu className="w-5 h-5" />,
-            skills: ["LLM Integration", "Vector DBs", "PDF Ingestion", "Chatbots"]
+            skills: ["VADER Sentiment Analysis", "LLM Integration", "Pattern Matching", "Vector DBs"]
         }
     ];
 

@@ -2,6 +2,17 @@ import type { Project, Experience } from '../types';
 
 export const projects: Project[] = [
     {
+        id: 'taptrade-system-api',
+        name: 'TapTrade System API',
+        problem: 'Required a cryptocurrency trading platform capable of analyzing social sentiment for AI trading signals.',
+        solution: 'Built RESTful APIs with FastAPI and integrated Twitter sentiment analysis using VADER NLP (achieving 85% accuracy). Implemented historical trading data API with cursor pagination, maintaining <50ms response times and 100% test coverage via 50+ automated tests.',
+        techStack: ['Python', 'FastAPI', 'SQLAlchemy', 'VADER', 'Pytest', 'PostgreSQL'],
+        architectureNotes: 'Microservices architecture with robust security (RBAC, JWT, input validation) and extensive testing.',
+        deploymentStatus: 'development',
+        githubUrl: 'https://github.com/khalidGir/taptrade-system-api',
+        image: '/taptrade_thumbnail.png'
+    },
+    {
         id: 'ethi-sugar-backend',
         name: 'Ethio-Sugar Backend',
         problem: 'Needed a robust, scalable backend architecture for an agricultural platform processing complex relationships.',
@@ -9,7 +20,8 @@ export const projects: Project[] = [
         techStack: ['TypeScript', 'Node.js', 'Express', 'PostgreSQL'],
         architectureNotes: 'Microservices style structure with clean repository pattern.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/ethi-sugar-backend'
+        githubUrl: 'https://github.com/khalidGir/ethi-sugar-backend',
+        image: '/ethio_backend_thumbnail.png'
     },
     {
         id: 'ethio-sugar-frontend',
@@ -19,7 +31,8 @@ export const projects: Project[] = [
         techStack: ['TypeScript', 'React', 'Tailwind CSS'],
         architectureNotes: 'Component-first architecture tailored for an industrial data dashboard.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/ethio-sugar-frontend'
+        githubUrl: 'https://github.com/khalidGir/ethio-sugar-frontend',
+        image: '/ethio_frontend_thumbnail.png'
     },
     {
         id: 'sekina-wellness',
@@ -29,7 +42,8 @@ export const projects: Project[] = [
         techStack: ['TypeScript', 'React', 'Next.js'],
         architectureNotes: 'Server-side rendered application focusing on SEO and performance.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Sekina-wellness'
+        githubUrl: 'https://github.com/khalidGir/Sekina-wellness',
+        image: '/sekina_wellness_thumbnail.png'
     },    
     {
         id: 'dashboard-ui',
@@ -39,7 +53,8 @@ export const projects: Project[] = [
         techStack: ['TypeScript', 'React', 'Tailwind CSS', 'Chart.js'],
         architectureNotes: 'Reusable UI component library for consistent styling.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/Dashboard-UI'
+        githubUrl: 'https://github.com/khalidGir/Dashboard-UI',
+        image: '/modern_dashboard_thumbnail.png'
     },
     {
         id: 'link-scope',
@@ -50,7 +65,8 @@ export const projects: Project[] = [
         architectureNotes: 'RESTful API architecture handling concurrent redirect tracking.',
         deploymentStatus: 'development',
         githubUrl: 'https://github.com/khalidGir/Link-Scope',
-        liveUrl: 'https://link-scope-theta.vercel.app'
+        liveUrl: 'https://link-scope-theta.vercel.app',
+        image: '/link_scope_thumbnail.png'
     },
     {
         id: 'interactive-resume-builder',
@@ -60,7 +76,8 @@ export const projects: Project[] = [
         techStack: ['TypeScript', 'React', 'Tailwind CSS'],
         architectureNotes: 'State management optimized for continuous real-time preview updates.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/interactive-resume-builder'
+        githubUrl: 'https://github.com/khalidGir/interactive-resume-builder',
+        image: '/resume_builder_thumbnail.png'
     },
     {
         id: 'ai-task-manager',
@@ -70,7 +87,8 @@ export const projects: Project[] = [
         techStack: ['TypeScript', 'React', 'Node.js', 'AI Integration'],
         architectureNotes: 'Asynchronous event-driven architecture integrating with AI prompt APIs.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/AI-task-manager'
+        githubUrl: 'https://github.com/khalidGir/AI-task-manager',
+        image: '/ai_task_manager_thumbnail.png'
     },
     {
         id: 'sentiment-analysis-api',
@@ -80,11 +98,27 @@ export const projects: Project[] = [
         techStack: ['Python', 'Flask', 'Machine Learning', 'NLP'],
         architectureNotes: 'REST API wrapping NLP analysis models.',
         deploymentStatus: 'development',
-        githubUrl: 'https://github.com/khalidGir/sentiment_analysis_api'
+        githubUrl: 'https://github.com/khalidGir/sentiment_analysis_api',
+        image: '/sentiment_api_thumbnail.png'
     }
 ];
 
 export const experiences: Experience[] = [
+    {
+        id: 'taptrade',
+        period: '2024 - Present',
+        company: 'TapTrade System API',
+        role: 'Backend & ML Engineer',
+        description: [
+            'Led end-to-end feature development for a cryptocurrency trading platform.',
+            'Integrated Twitter sentiment analysis with NLP (VADER) for AI trading signals, achieving 85% accuracy.',
+            'Built historical trading data API with cursor pagination, establishing <50ms response times.',
+            'Achieved 100% test pass rate with 50+ automated tests, including integration and load testing.',
+            'Enhanced API security with regex input validation, dependency version pinning, and RBAC.'
+        ],
+        skills: ['FastAPI', 'Python', 'SQLAlchemy', 'VADER NLP', 'Pytest', 'PostgreSQL'],
+        type: 'product'
+    },
     {
         id: 'syntax-program',
         period: 'Dec 2025 - Present',
