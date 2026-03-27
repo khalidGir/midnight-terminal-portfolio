@@ -15,9 +15,11 @@
     "@fontsource/playfair-display": "^5.2.8",
     "@fontsource/plus-jakarta-sans": "^5.2.8",
     "clsx": "^2.1.1",
+    "dotenv": "^8.2.0",
     "framer-motion": "^12.25.0",
     "intersection-observer": "^0.12.2",
     "lucide-react": "^0.562.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwind-merge": "^3.4.0"

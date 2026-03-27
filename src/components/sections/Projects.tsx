@@ -9,8 +9,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`group card overflow-hidden flex flex-col h-full ${!project.liveUrl ? 'opacity-70' : ''}`}
+            className={`group card overflow-hidden flex flex-col h-full transition-transform hover:-translate-y-1 hover:shadow-xl ${!project.liveUrl ? 'opacity-80' : ''}`}
         >
+            {project.image && (
+                <div className="h-48 w-full overflow-hidden bg-slate-900 shrink-0">
+                    <img
+                        src={project.image}
+                        alt={`${project.name} thumbnail`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+            )}
             <div className="p-8 flex-1 flex flex-col">
                 <div className="flex justify-between items-start mb-6">
                     <div className="flex gap-3">

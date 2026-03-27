@@ -105,21 +105,6 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
     {
-        id: 'taptrade',
-        period: '2024 - Present',
-        company: 'TapTrade System API',
-        role: 'Backend & ML Engineer',
-        description: [
-            'Led end-to-end feature development for a cryptocurrency trading platform.',
-            'Integrated Twitter sentiment analysis with NLP (VADER) for AI trading signals, achieving 85% accuracy.',
-            'Built historical trading data API with cursor pagination, establishing <50ms response times.',
-            'Achieved 100% test pass rate with 50+ automated tests, including integration and load testing.',
-            'Enhanced API security with regex input validation, dependency version pinning, and RBAC.'
-        ],
-        skills: ['FastAPI', 'Python', 'SQLAlchemy', 'VADER NLP', 'Pytest', 'PostgreSQL'],
-        type: 'product'
-    },
-    {
         id: 'syntax-program',
         period: 'Dec 2025 - Present',
         company: 'Syntax Software Solutions',
