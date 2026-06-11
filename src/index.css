@@ -1,15 +1,13 @@
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/outfit/500.css";
-@import '@fontsource/playfair-display';
-@import '@fontsource/plus-jakarta-sans';
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -17,47 +15,102 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 font-sans antialiased scroll-smooth;
+    background: #0a0a0a;
+    color: #fafafa;
+    font-family: "Geist", system-ui, sans-serif;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-heading font-bold text-text-primary;
+  ::selection {
+    background: #f59e0b;
+    color: #0a0a0a;
   }
 
-  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-transparent;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-slate-200 rounded-full;
+    background: #27272a;
+    border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-300;
-  }
-
-  /* Selection Glow */
-  ::selection {
-    @apply bg-accent-primary/20 text-accent-primary;
+    background: #3f3f46;
   }
 }
 
 @layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, #f59e0b, #f97316, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent-primary text-white font-medium transition-all duration-200 hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent-primary/50 disabled:opacity-50 disabled:cursor-not-allowed shadow-card hover:shadow-card-hover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background: #f59e0b;
+    color: #0a0a0a;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #d97706;
   }
 
   .card {
-    @apply bg-white rounded-xl border border-slate-100 shadow-card transition-all duration-300 hover:shadow-card-hover;
+    background: #18181b;
+    border: 1px solid #27272a;
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  }
+
+  .section-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 }

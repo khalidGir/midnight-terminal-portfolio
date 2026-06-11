@@ -1,100 +1,96 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
-import type { Project } from '../../types';
+import { ExternalLink, BarChart3, Timer, Leaf, Puzzle, type LucideIcon } from 'lucide-react';
+import { GithubIcon } from '../shared/Icons';
 import { projects } from '../../data/portfolio';
+import Section from '../shared/Section';
 
-const ProjectCard = ({ project }: { project: Project }) => {
-    return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className={`group card overflow-hidden flex flex-col h-full transition-transform hover:-translate-y-1 hover:shadow-xl ${!project.liveUrl ? 'opacity-80' : ''}`}
-        >
-            {project.image && (
-                <div className="h-48 w-full overflow-hidden bg-slate-900 shrink-0">
-                    <img
-                        src={project.image}
-                        alt={`${project.name} thumbnail`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                </div>
-            )}
-            <div className="p-8 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-6">
-                    <div className="flex gap-3">
-                        {project.techStack.slice(0, 3).map(tech => (
-                            <span key={tech} className="text-xs font-medium text-accent-primary bg-indigo-50 px-2 py-1 rounded-full">
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-                    <div className="flex gap-4">
-                        <a href={project.githubUrl} className="text-text-muted hover:text-text-primary transition-colors" title="View Code">
-                            <Github size={20} />
-                        </a>
-                        {project.liveUrl && (
-                            <a href={project.liveUrl} className="text-text-muted hover:text-accent-primary transition-colors" title="View Live">
-                                <ExternalLink size={20} />
-                            </a>
-                        )}
-                    </div>
-                </div>
-
-                <h3 className="text-2xl font-heading font-bold text-text-primary mb-3">
-                    {project.name}
-                </h3>
-
-                <p className="text-text-secondary leading-relaxed mb-6 flex-1">
-                    {project.problem}
-                </p>
-
-                <div className="pt-6 border-t border-slate-100 mt-auto">
-                    <div className="flex items-center justify-between">
-                        <span className="text-sm font-medium text-text-primary">
-                            {project.solution.substring(0, 40)}...
-                        </span>
-                        {project.liveUrl ? (
-                            <a href={project.liveUrl} className="flex items-center text-sm font-medium text-accent-primary group-hover:underline">
-                                See Project <ArrowUpRight className="ml-1 w-4 h-4" />
-                            </a>
-                        ) : (
-                            <span className="flex items-center text-sm font-medium text-text-muted cursor-not-allowed">
-                                In Development
-                            </span>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </motion.div>
-    );
+const iconMap: Record<string, LucideIcon> = {
+    BarChart3,
+    Timer,
+    Leaf,
+    Puzzle,
 };
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-24">
-            <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 space-y-4 md:space-y-0">
-                    <div>
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-text-primary mb-4">
-                            Github Projects
-                        </h2>
-                        <p className="text-lg text-text-secondary max-w-xl">
-                            A selection of projects that demonstrate my technical capabilities and problem-solving skills.
-                        </p>
-                    </div>
-                    <a href="https://github.com/khalidGir" className="text-accent-primary font-medium hover:underline flex items-center">
-                        View GitHub <ArrowUpRight className="ml-1 w-4 h-4" />
-                    </a>
-                </div>
+        <Section id="projects">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center"
+            >
+                <span className="text-xs font-medium uppercase tracking-widest text-amber-400">
+                    Projects
+                </span>
+                <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">
+                    Featured <span className="gradient-text">work</span>
+                </h2>
+            </motion.div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map(project => (
-                        <ProjectCard key={project.id} project={project} />
-                    ))}
-                </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+                {projects.map((project, i) => {
+                    const Icon = iconMap[project.icon];
+                    return (
+                        <motion.article
+                            key={project.id}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            className="group relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 transition-all hover:border-zinc-700"
+                        >
+                            <div
+                                className="flex aspect-[16/10] items-center justify-center bg-gradient-to-br from-zinc-800 to-zinc-900 bg-cover bg-center"
+                                style={{ backgroundImage: `url(${project.image})` }}
+                            >
+                                <div className="absolute inset-0 bg-black/40" />
+                                {Icon && (
+                                    <Icon size={48} className="relative text-zinc-600 opacity-20 transition-all group-hover:opacity-40 group-hover:text-amber-400" />
+                                )}
+                            </div>
+
+                            <div className="p-6">
+                                <div className="flex items-start justify-between">
+                                    <h3 className="text-lg font-semibold">{project.title}</h3>
+                                    <div className="flex shrink-0 gap-1">
+                                        <a
+                                            href={project.githubUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="rounded-lg p-2 text-zinc-500 transition-colors hover:text-zinc-200"
+                                        >
+                                            <GithubIcon size={14} />
+                                        </a>
+                                        <a
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="rounded-lg p-2 text-zinc-500 transition-colors hover:text-zinc-200"
+                                        >
+                                            <ExternalLink size={14} />
+                                        </a>
+                                    </div>
+                                </div>
+                                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
+                                    {project.description}
+                                </p>
+                                <div className="mt-4 flex flex-wrap gap-2">
+                                    {project.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="rounded-md bg-zinc-800 px-2.5 py-1 text-xs text-zinc-400"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.article>
+                    );
+                })}
             </div>
-        </section>
+        </Section>
     );
 };
 

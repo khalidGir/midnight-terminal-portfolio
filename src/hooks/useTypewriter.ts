@@ -18,7 +18,7 @@ export const useTypewriter = (texts: string[], speed: number = 50, delay: number
                 setDisplayText(currentFullText.substring(0, displayText.length - 1));
                 if (displayText.length === 0) {
                     setIsDeleting(false);
-                    setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+                    setCurrentTextIndex((prev: number) => (prev + 1) % texts.length);
                 }
             }
         }, isDeleting ? speed / 2 : speed);
