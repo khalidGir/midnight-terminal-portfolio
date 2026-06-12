@@ -66,26 +66,22 @@ const Hero = () => {
                         variants={item}
                         className="mt-10 flex flex-wrap items-center justify-center gap-4"
                     >
-                        <a
-                            href="#projects"
-                            className="btn-primary gap-2"
-                            onClick={(e) => {
-                                e.preventDefault();
+                        <button
+                            onClick={() => {
                                 document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
                             }}
+                            className="btn-primary gap-2 cursor-pointer"
                         >
                             View my work <ArrowRight size={16} />
-                        </a>
-                        <a
-                            href="#contact"
-                            className="rounded-lg border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-500 hover:text-zinc-100"
-                            onClick={(e) => {
-                                e.preventDefault();
+                        </button>
+                        <button
+                            onClick={() => {
                                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                             }}
+                            className="rounded-lg border border-zinc-700 px-6 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-500 hover:text-zinc-100 cursor-pointer"
                         >
                             Get in touch
-                        </a>
+                        </button>
                     </motion.div>
 
                     <motion.div
